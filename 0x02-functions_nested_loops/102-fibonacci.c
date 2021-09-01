@@ -20,3 +20,8 @@ int main(void)
 		j = k;
 		k = sum;
 	}
+
+	printf("\n");
+
+	return (0);
+}
