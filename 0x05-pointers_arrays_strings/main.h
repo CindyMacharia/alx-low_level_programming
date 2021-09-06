@@ -1,24 +1,11 @@
-#include "main.h"
+#ifndef MAIN_H
+#define MAIN_H
 
-/**
- *print_line - prints straight line
- *@n: integer
- *Return: no return value
-*/
+#include <stdio.h>
 
-void print_line(int n)
-{
-        char i;
+void positive_or_negative(int i);
+int largest_number(int, int, int);
+void print_remaining_days(int, int, int);
+int convert_day(int, int);
 
-        if (n <= 0)
-        {
-                _putchar('\n');
-        }
-
-        for (i = 1; i <= n; i++)
-        {
-                putchar('');
-        }
-        _putchar('\n');
-
-}
+#endif /* MAIN_H */
