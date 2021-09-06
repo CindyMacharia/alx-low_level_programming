@@ -1,31 +1,21 @@
 #include "holberton.h"
 /**
- * _strchr -  locates a character in a string.
- * @s: pointer with the location of the string
- * @c: character to find in the string
+ * _strlen - returns the length of a string.
+ * @s: array with the characters of the word
  *
  * Return: Always 0.
  */
-char *_strchr(char *s, char c)
+int _strlen(char *s)
 {
-	int i;
-	int j;
+	int num;
+	int index;
+	char letter = s[0];
 
-	i = 0;
-	while (s[i] != '\0')
+	for (index = 0; letter != '\0';)
 	{
-		i++;
+		index++;
+		letter = s[index];
+		num = num + 1;
 	}
-	for (j = 0; j <= i; j++)
-	{
-		if (s[j] == c)
-		{
-			return (s + j);
-		}
-		else if (s[j] == '\0')
-		{
-			s = '\0';
-		}
-	}
-	return (s);
+	return (num);
 }
