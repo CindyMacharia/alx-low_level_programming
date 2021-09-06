@@ -3,7 +3,8 @@
 int _strlen(char *);
 
 /**
- * main - check the code for Holberton School students.
+ * _strlen - returns the length of a string.
+ * @s: array with the characters of the word
  *
  * Return: Always 0.
  */
