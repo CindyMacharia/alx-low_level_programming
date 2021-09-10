@@ -1,23 +1,26 @@
-#include "holberton.h"
+#include "main.h"
+
 /**
- * _strncpy -  concatenates two strings.
- * @src: array with the string source
- * @dest: pointer where the text is append
- * @n: num of bytes to be append from src
+ * _strncpy - Copies a string.
  *
- * Return: Always 0.
+ * @dest: String pointer to be copied to.
+ * @src: String pointer to be copied.
+ * @n: Number of bytes to be appended from src.
+ *
+ * Return: dest pointer.
  */
+
 char *_strncpy(char *dest, char *src, int n)
 {
-	int index;
+	int i;
 
-	for (index = 0; index < n && src[index] != '\0'; index++)
+	for (i = 0; i < n && *(src + i) != '\0'; i++)
 	{
-		dest[index] = src[index];
+		*(dest + i) = *(src + i);
 	}
-	for (; index < n; index++)
+	for ( ; i < n; i++)
 	{
-		dest[index] = '\0';
+		*(dest + i) = '\0';
 	}
 	return (dest);
 }
