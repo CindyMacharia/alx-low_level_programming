@@ -1,17 +1,25 @@
 #include "main.h"
 
-/**
- * main - checks the lenth of a substring
- *
- * Return: Always 0.
- */
-int main(void)
-{
-    char *s = "hello, world";
-    char *f = "world";
-    char *t;
+#include <stdio.h>
 
-    t = _strstr(s, f);
-    printf("%s\n", t);
-    return (0);
+int main()
+{
+   char string[1000], sub[1000];
+   int position, length, c = 0;
+
+   printf("Input a string\n");
+   gets(string);
+
+   printf("Enter the position and length of substring\n");
+   scanf("%d%d", &position, &length);
+
+   while (c < length) {
+      sub[c] = string[position+c-1];
+      c++;
+   }
+   sub[c] = '\0';
+
+   printf("Required substring is \"%s\"\n", sub); // '\"' to print "
+
+   return 0;
 }
