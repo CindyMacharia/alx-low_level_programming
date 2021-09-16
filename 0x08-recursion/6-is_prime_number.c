@@ -1,40 +1,35 @@
-#include main.h
-
-# return true if the number is prime
+#include "main.h"
 /**
- * main - returns 1 if the input integer is a prime number,
+ * _isprime - shows me when a number is prime
  *
- *@ int is_prime_number(int n)
+ * @n: int to check
+ * @corre: int to check
+ *
+ * Return: 0 if is not a prime
  */
+int _esprimo(int n, int corre)
+{
+	if (n < 2)
+		return (0);
+	if (n == 2)
+		return (1);
+	if (corre >= n / 2)
+		return (1);
+	if (n % corre == 0)
+		return (0);
+	else
+		return (_esprimo(n, corre + 1));
+	return (1);
+}
 
- def isPrime(num):
-	# 1,2,3 are prime
-	if (num>3):
-		# only check the odd numbers
-		if (num%2 == 0):
-			return False
-		else:
-			for i in range(3, (num/2)+1, 2):
-				if (num%i) == 0:
-					return False
-
-	return True
-
-# return all the primes up to a certain number
-def primes(num):
-	primes = []
-	if (num>3):
-		primes.append(1), primes.append(2), primes.append(3)
-
-	for i in range(1, num+1, 2):
-		# if 1 and 3 are in the list, don't add them again
-		if ((primes[0]== 1 and primes[2] == 3) and (i==1 or i==3)):
-			pass
-		else:
-			if isPrime(i):
-				primes.append(i)
-	return primes
-
-num = 121
-nums = primes(num)
-print nums
+/**
+ * is_prime_number - function return 1 if is prime number
+ *
+ * @n: to check
+ *
+ * Return: 0 if is not prime number
+ */
+int is_prime_number(int n)
+{
+return (_esprimo(n, 2));
+}
