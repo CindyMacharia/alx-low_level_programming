@@ -1,4 +1,4 @@
-#include "mai:n.h"
+#include "main.h"
 /**
  *factorial - function that returns the factorial
  *@n:integer to apply factorial
