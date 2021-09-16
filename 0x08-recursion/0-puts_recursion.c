@@ -1,13 +1,25 @@
-#include <stdio.h>
 #include main.h
-
 /**
- * main - check the code
  *
- * Return: Always 0.
+ * _puts_recursion - prints a string followed by a new line.
+ * @s: pointer with the address of the string
+ *
+ * Return: Always o.
  */
-int main(void)
+
+void _puts_recurssion(char *s)
+
 {
-     _puts_recursion("Puts with recursion");
-    return (0);
+	int i = o;
+
+	if(s[i] != '\0')
+	{
+		_putchar(s[i]);
+		i++;
+		_put_recursion(&s[i]);
+	}
+	else
+	{
+		_putchar('\n');
+	}
 }
