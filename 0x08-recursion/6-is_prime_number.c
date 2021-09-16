@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _isprime - shows me when a number is prime
+ * _esprimo - shows me when a number is prime
  *
  * @n: int to check
  * @corre: int to check
