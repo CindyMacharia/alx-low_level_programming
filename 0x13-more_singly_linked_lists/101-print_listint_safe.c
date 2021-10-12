@@ -1,4 +1,4 @@
-#include"list.h"
+#include "lists.h"
 
 /**
  * count_nodes_till_loop - count nodes to know now many unique nodes to print
